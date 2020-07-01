@@ -5,7 +5,6 @@ const router = express.Router();
 const {
   rejectUnauthenticated,
 } = require("../modules/authentication-middleware");
-//const userStrategy = require("../strategies/user.strategy");
 
 router.get("/", rejectUnauthenticated, (req, res) => {
   console.log("req.user:", req.user);
